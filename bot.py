@@ -1,7 +1,6 @@
 # bot.py
 # Python 3.10+
 # pip install python-telegram-bot==21.4
-# export BOT_TOKEN = 8433955587:AAEWYkdVGjcY59JV6qly2cpPPxgVt5eMwUU
 import os
 from dataclasses import dataclass
 from typing import List, Dict, Optional
@@ -274,7 +273,7 @@ async def on_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 # ========== Точка входа ==========
 def main():
-    token = os.getenv("8433955587:AAGx8f69pGidInkxvNk_I3FOb8Wu2UTqRkM"
+    token = os.getenv("BOT_TOKEN")
     if not token:
         raise RuntimeError("Задайте BOT_TOKEN в переменных окружения, например:\nexport BOT_TOKEN=123456:ABC...")
     app = ApplicationBuilder().token(token).build()
@@ -289,3 +288,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
