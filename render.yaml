@@ -1,0 +1,10 @@
+services:
+  - type: worker
+    name: rpp-bot
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot.py
+    envVars:
+      - key: BOT_TOKEN
+        sync: false   # значение зададите в UI Render → Environment
+    plan: starter     # или free если доступен, зависит от вашего аккаунта
